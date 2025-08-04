@@ -3,7 +3,7 @@
 let materiasAprobadas = new Set();
 
 async function cargarMalla() {
-  const res = await fetch('./data/malla.json');
+  const res = await fetch('data/malla.json');
   const data = await res.json();
   renderizarMalla(data.semestres);
 }
