@@ -1,1 +1,328 @@
+{
+  "semestres": [
+    {
+      "materias": [
+        {
+          "codigo": "2017777",
+          "nombre": "Ecología",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "2017776",
+          "nombre": "Ciencias de la Tierra",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "1000024",
+          "nombre": "Principios de Química",
+          "creditos": 3,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "1000025",
+          "nombre": "Laboratorio Principios de Química",
+          "creditos": 3,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": ["1000024"]
+        },
+        {
+          "codigo": "1000001-B",
+          "nombre": "Matemáticas Básicas",
+          "creditos": 4,
+          "tipologia": "Nivelación",
+          "requisitos": []
+        }
+      ]
+    },
+    {
+      "materias": [
+        {
+          "codigo": "2015877",
+          "nombre": "Biología de Plantas",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "2017774",
+          "nombre": "Biología Evolutiva",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "1000030",
+          "nombre": "Química Orgánica",
+          "creditos": 3,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": ["1000024"]
+        },
+        {
+          "codigo": "1000031",
+          "nombre": "Lab. Principios de Orgánica",
+          "creditos": 3,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": ["1000030"]
+        }
+      ]
+    },
+    {
+      "materias": [
+        {
+          "codigo": "2017772",
+          "nombre": "Biología Animal",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "2017773",
+          "nombre": "Biología de Microorganismos",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "2023214",
+          "nombre": "Principios Bioquímicos",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": ["1000030"]
+        },
+        {
+          "codigo": "2017010",
+          "nombre": "Lab. Bioquímica",
+          "creditos": 2,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": ["2023214"]
+        }
+      ]
+    },
+    {
+      "materias": [
+        {
+          "codigo": "2017778",
+          "nombre": "Fundamentación de Investigación",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "1000004",
+          "nombre": "Cálculo Diferencial",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": ["1000001-B"]
+        },
+        {
+          "codigo": "1000023-B",
+          "nombre": "Mecánica y Ondas",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": ["1000001-B"]
+        }
+      ]
+    },
+    {
+      "materias": [
+        {
+          "codigo": "2017779",
+          "nombre": "Genética",
+          "creditos": 4,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "1000012",
+          "nombre": "Bioestadística Fundamental",
+          "creditos": 3,
+          "tipologia": "FUND. OBLIGATORIA",
+          "requisitos": ["1000001-B"]
+        },
+        {
+          "codigo": "OPT-FUND-1",
+          "nombre": "Optativa Fundamental",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-1",
+          "nombre": "Disciplinar 1",
+          "creditos": 3,
+          "requisitos": []
+        }
+      ]
+    },
+    {
+      "materias": [
+        {
+          "codigo": "OPT-FUND-2",
+          "nombre": "Optativa Fundamental 2",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-2",
+          "nombre": "Disciplinar 2",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-3",
+          "nombre": "Disciplinar 3",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-4",
+          "nombre": "Disciplinar 4",
+          "creditos": 3,
+          "requisitos": []
+        }
+      ]
+    },
+    {
+      "materias": [
+        {
+          "codigo": "DISC-5",
+          "nombre": "Disciplinar 5",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-6",
+          "nombre": "Disciplinar 6",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-7",
+          "nombre": "Disciplinar 7",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-1",
+          "nombre": "Libre Elección 1",
+          "creditos": 2,
+          "requisitos": []
+        }
+      ]
+    },
+    {
+      "materias": [
+        {
+          "codigo": "DISC-8",
+          "nombre": "Disciplinar 8",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-9",
+          "nombre": "Disciplinar 9",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-10",
+          "nombre": "Disciplinar 10",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-2",
+          "nombre": "Libre Elección 2",
+          "creditos": 2,
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-3",
+          "nombre": "Libre Elección 3",
+          "creditos": 2,
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-4",
+          "nombre": "Libre Elección 4",
+          "creditos": 2,
+          "requisitos": []
+        }
+      ]
+    },
+    {
+      "materias": [
+        {
+          "codigo": "DISC-11",
+          "nombre": "Disciplinar 11",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-12",
+          "nombre": "Disciplinar 12",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "DISC-13",
+          "nombre": "Disciplinar 13",
+          "creditos": 3,
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-5",
+          "nombre": "Libre Elección 5",
+          "creditos": 2,
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-6",
+          "nombre": "Libre Elección 6",
+          "creditos": 2,
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-7",
+          "nombre": "Libre Elección 7",
+          "creditos": 2,
+          "requisitos": []
+        }
+      ]
+    },
+    {
+      "materias": [
+        {
+          "codigo": "2023028",
+          "nombre": "Trabajo de Grado",
+          "creditos": 8,
+          "tipologia": "OBLIGATORIA",
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-8",
+          "nombre": "Libre Elección 8",
+          "creditos": 2,
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-9",
+          "nombre": "Libre Elección 9",
+          "creditos": 2,
+          "requisitos": []
+        },
+        {
+          "codigo": "LE-10",
+          "nombre": "Libre Elección 10",
+          "creditos": 2,
+          "requisitos": []
+        }
+      ]
+    }
+  ]
+}
 
