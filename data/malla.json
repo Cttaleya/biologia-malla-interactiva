@@ -2,22 +2,13 @@
   "semestres": [
     {
       "nombre": "Semestre 1",
-      "materias": [
-        "Biología General",
-        "Química",
-        "Matemáticas",
-        "Ecología"
-      ]
+      "materias": ["Biología General", "Química", "Matemáticas", "Ecología"]
     },
     {
       "nombre": "Semestre 2",
-      "materias": [
-        "Física",
-        "Botánica",
-        "Zoología",
-        "Genética"
-      ]
+      "materias": ["Física", "Botánica", "Zoología", "Genética"]
     }
   ]
 }
+
 
