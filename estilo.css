@@ -1,1 +1,80 @@
+/* style.css – Estilo rosado para la malla interactiva */
+body {
+  background-color: #fff0f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #d63384;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+#malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.semestre {
+  background-color: #ffe3ec;
+  border-left: 5px solid #ff69b4;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.semestre h2 {
+  margin-top: 0;
+  color: #ad1457;
+}
+
+.materia {
+  background-color: #fff;
+  border: 2px solid #f783ac;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.materia h3 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #880e4f;
+}
+
+.materia p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 8px;
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff3385;
+}
+
+button:disabled {
+  background-color: #ffc0cb;
+  cursor: not-allowed;
+}
+
+.aprobada {
+  background-color: #d0f0c0;
+  border-color: #4CAF50;
+}
 
