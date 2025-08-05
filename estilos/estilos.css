@@ -1,20 +1,17 @@
-/* Fuente y fondo */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff0f5;
+  color: #333;
   margin: 0;
   padding: 20px;
-  color: #333;
 }
 
-h1 {
+.titulo {
   text-align: center;
   color: #d63384;
-  font-size: 2rem;
   margin-bottom: 30px;
 }
 
-/* Contenedor principal */
 .contenedor-malla {
   display: flex;
   flex-wrap: wrap;
@@ -22,54 +19,41 @@ h1 {
   gap: 20px;
 }
 
-/* Cada columna de semestre */
 .semestre {
   background-color: #ffe6f0;
   border: 2px solid #d63384;
-  border-radius: 15px;
+  border-radius: 12px;
   padding: 15px;
   width: 280px;
-  box-shadow: 0 4px 8px rgba(214, 51, 132, 0.2);
-  transition: transform 0.2s ease;
-}
-
-.semestre:hover {
-  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(214, 51, 132, 0.1);
 }
 
 .semestre h2 {
   text-align: center;
-  color: #ad1457;
-  font-size: 1.2rem;
+  color: #c2185b;
+  font-size: 1.1rem;
   margin-bottom: 15px;
 }
 
-/* Cada ramo */
-.ramo {
-  background-color: white;
-  border-left: 6px solid #d63384;
+.materia {
+  border: 2px dashed #f06292;
   border-radius: 8px;
   padding: 10px;
-  margin: 10px 0;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: #333;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.ramo:hover {
-  background-color: #fff5fa;
+.materia:hover {
+  background-color: #fff5f8;
 }
 
-/* Aprobado: marcado en rosa claro */
-.ramo.aprobado {
-  background-color: #f8bbd0;
+.materia.aprobada {
+  background-color: #f48fb1;
+  color: white;
+  border: none;
   text-decoration: line-through;
-  border-left-color: #880e4f;
-}
-
-/* Bloqueado: grisado y no interactivo */
-.ramo.bloqueado {
-  opacity: 0.4;
-  cursor: not-allowed;
-  pointer-events: none;
 }
