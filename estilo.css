@@ -1,59 +1,191 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffe6f0;
-  margin: 0;
-  padding: 20px;
-  color: #333;
+const materias = [
+  {
+    codigo: "2017777",
+    nombre: "Ecología",
+    creditos: 4,
+    semestre: 1,
+    requisitos: [],
+  },
+  {
+    codigo: "2017776",
+    nombre: "Ciencias de la Tierra",
+    creditos: 4,
+    semestre: 1,
+    requisitos: [],
+  },
+  {
+    codigo: "1000024",
+    nombre: "Principios de Química",
+    creditos: 3,
+    semestre: 1,
+    requisitos: [],
+  },
+  {
+    codigo: "1000025",
+    nombre: "Laboratorio Principio de química",
+    creditos: 3,
+    semestre: 1,
+    requisitos: ["1000024"],
+  },
+  {
+    codigo: "1000001-B",
+    nombre: "Matemáticas Básicas",
+    creditos: 4,
+    semestre: 1,
+    requisitos: [],
+  },
+  {
+    codigo: "2015877",
+    nombre: "Biología de Plantas",
+    creditos: 4,
+    semestre: 2,
+    requisitos: [],
+  },
+  {
+    codigo: "2017774",
+    nombre: "Biología Evolutiva",
+    creditos: 4,
+    semestre: 2,
+    requisitos: [],
+  },
+  {
+    codigo: "1000030",
+    nombre: "Química Orgánica",
+    creditos: 3,
+    semestre: 2,
+    requisitos: ["1000024"],
+  },
+  {
+    codigo: "1000031",
+    nombre: "Lab. Principio Orgánica",
+    creditos: 3,
+    semestre: 2,
+    requisitos: ["1000030"],
+  },
+  {
+    codigo: "2023214",
+    nombre: "Principios bioquímicos",
+    creditos: 4,
+    semestre: 3,
+    requisitos: ["1000030"],
+  },
+  {
+    codigo: "2017010",
+    nombre: "Lab. Bioquímica",
+    creditos: 2,
+    semestre: 3,
+    requisitos: ["2023214"],
+  },
+  {
+    codigo: "2017775",
+    nombre: "Biomolecular Celular",
+    creditos: 4,
+    semestre: 4,
+    requisitos: ["2023214"],
+  },
+  {
+    codigo: "2017778",
+    nombre: "Fundamentación de Investigación",
+    creditos: 4,
+    semestre: 4,
+    requisitos: [],
+  },
+  {
+    codigo: "1000004",
+    nombre: "Cálculo Diferencial",
+    creditos: 4,
+    semestre: 4,
+    requisitos: ["1000001-B"],
+  },
+  {
+    codigo: "1000023-B",
+    nombre: "Mecánica y Ondas",
+    creditos: 4,
+    semestre: 4,
+    requisitos: ["1000001-B"],
+  },
+  {
+    codigo: "2017779",
+    nombre: "Genética",
+    creditos: 4,
+    semestre: 5,
+    requisitos: ["2017775"],
+  },
+  {
+    codigo: "1000012",
+    nombre: "Bioestadística Fundamental",
+    creditos: 3,
+    semestre: 5,
+    requisitos: ["1000001-B"],
+  },
+  {
+    codigo: "2023028",
+    nombre: "Trabajo de Grado",
+    creditos: 6,
+    semestre: 10,
+    requisitos: [],
+    condicionEspecial: true,
+  },
+  // Puedes seguir agregando optativas/disciplinarias/libres como placeholders
+];
+
+let aprobadas = new Set();
+
+function crearMalla() {
+  const contenedor = document.getElementById("malla");
+  contenedor.innerHTML = "";
+
+  const semestres = {};
+  materias.forEach((m) => {
+    if (!semestres[m.semestre]) semestres[m.semestre] = [];
+    semestres[m.semestre].push(m);
+  });
+
+  for (const [semestre, ramos] of Object.entries(semestres)) {
+    const div = document.createElement("div");
+    div.className = "semestre";
+    div.innerHTML = `<h2>Semestre ${semestre}</h2>`;
+
+    ramos.forEach((ramo) => {
+      const divRamo = document.createElement("div");
+      divRamo.className = "ramo";
+      divRamo.dataset.codigo = ramo.codigo;
+      divRamo.innerHTML = `
+        <strong>${ramo.nombre}</strong><br />
+        Código: ${ramo.codigo}<br />
+        Créditos: ${ramo.creditos}
+      `;
+
+      const requisitosCumplidos = ramo.requisitos.every((cod) =>
+        aprobadas.has(cod)
+      );
+
+      if (!requisitosCumplidos && ramo.requisitos.length > 0) {
+        divRamo.classList.add("bloqueado");
+      }
+
+      if (aprobadas.has(ramo.codigo)) {
+        divRamo.classList.add("aprobado");
+      }
+
+      divRamo.addEventListener("click", () => {
+        if (!divRamo.classList.contains("bloqueado")) {
+          if (aprobadas.has(ramo.codigo)) {
+            aprobadas.delete(ramo.codigo);
+          } else {
+            aprobadas.add(ramo.codigo);
+          }
+          crearMalla(); // volver a renderizar
+        }
+      });
+
+      div.appendChild(divRamo);
+    });
+
+    contenedor.appendChild(div);
+  }
 }
 
-h1 {
-  text-align: center;
-  color: #d63384;
-}
-
-.contenedor-malla {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.semestre {
-  background-color: #fcd6e3;
-  border: 2px solid #d63384;
-  border-radius: 10px;
-  padding: 10px;
-  width: 300px;
-}
-
-.semestre h2 {
-  text-align: center;
-  color: #c2185b;
-}
-
-.ramo {
-  background-color: #fff;
-  border: 1px solid #d63384;
-  border-radius: 5px;
-  padding: 8px;
-  margin: 6px 0;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.ramo:hover {
-  background-color: #ffe0ec;
-}
-
-.ramo.aprobado {
-  background-color: #ffc0cb;
-  text-decoration: line-through;
-}
-
-.ramo.bloqueado {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
+window.onload = crearMalla;
 
 
