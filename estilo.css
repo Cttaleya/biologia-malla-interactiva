@@ -1,75 +1,58 @@
-/* Fuente y fondo */
+/* style.css */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff0f5;
+  background-color: #ffe6f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
-  color: #333;
 }
 
 h1 {
   text-align: center;
   color: #d63384;
-  font-size: 2rem;
-  margin-bottom: 30px;
 }
 
-/* Contenedor principal */
-.contenedor-malla {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+#malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
 
-/* Cada columna de semestre */
-.semestre {
-  background-color: #ffe6f0;
-  border: 2px solid #d63384;
-  border-radius: 15px;
+.card {
+  background-color: #fff0f6;
+  border: 2px solid #f783ac;
+  border-radius: 12px;
   padding: 15px;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(214, 51, 132, 0.2);
-  transition: transform 0.2s ease;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-.semestre:hover {
-  transform: scale(1.02);
+.card h3 {
+  margin: 0 0 10px 0;
+  color: #a61e4d;
 }
 
-.semestre h2 {
-  text-align: center;
-  color: #ad1457;
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+.card p {
+  margin: 5px 0;
+  font-size: 14px;
 }
 
-/* Cada ramo */
-.ramo {
-  background-color: white;
-  border-left: 6px solid #d63384;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 10px 0;
+.card button {
+  background-color: #ff69b4;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  margin-top: 10px;
 }
 
-.ramo:hover {
-  background-color: #fff5fa;
-}
-
-/* Aprobado: marcado en rosa claro */
-.ramo.aprobado {
-  background-color: #f8bbd0;
-  text-decoration: line-through;
-  border-left-color: #880e4f;
-}
-
-/* Bloqueado: grisado y no interactivo */
-.ramo.bloqueado {
-  opacity: 0.4;
+.card button:disabled {
+  background-color: #ffc0cb;
   cursor: not-allowed;
-  pointer-events: none;
+}
+
+.card.aprobada {
+  background-color: #d0f0c0;
+  border-color: #4CAF50;
 }
